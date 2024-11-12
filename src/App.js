@@ -33,12 +33,12 @@ function App() {
   }, [])
 
   const handleSortDate = () => {
-    const dataSorted = [...data].sort((a, b) => new Date(a.date) - new Date(b.date))
+    const dataSorted = [...data].sort((a, b) => new Date(b.date) - new Date(a.date))
     setData(dataSorted)
   }
 
   const handleViews = () => {
-    const viewsData = [...data].sort((a, b) => a.views - b.views)
+    const viewsData = [...data].sort((a, b) => b.views - a.views)
     setData(viewsData)
   }
   return (
